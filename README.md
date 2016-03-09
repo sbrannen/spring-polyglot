@@ -12,7 +12,7 @@ programming languages.
 And who knows...? Perhaps some of these translated annotations will someday
 make it into the Spring Framework.
 
-# For Exmample...
+# A German Example
 
 For example, the following is what an integration test in Spring could look
 like when `@ContextConfiguration` is translated into German.

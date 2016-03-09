@@ -25,9 +25,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @author Sam Brannen
  * @since 1.0
  */
-public final class SpringJUnit4IntegrationsTestUnterstuetzung extends SpringJUnit4ClassRunner {
+public final class SpringJUnit4IntegrationsTestUnterstützung extends SpringJUnit4ClassRunner {
 
-	public SpringJUnit4IntegrationsTestUnterstuetzung(Class<?> clazz) throws InitializationError {
+	public SpringJUnit4IntegrationsTestUnterstützung(Class<?> clazz) throws InitializationError {
 		super(clazz);
 	}
 

@@ -27,7 +27,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.polyglot.de.DeutscheIntegrationsTests.LokaleTestKonfiguration;
 import org.springframework.polyglot.de.test.context.KontextKonfiguration;
-import org.springframework.polyglot.de.test.context.junit4.SpringJUnit4IntegrationsTestUnterstuetzung;
+import org.springframework.polyglot.de.test.context.junit4.SpringJUnit4IntegrationsTestUnterstützung;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
 /**
@@ -36,7 +36,7 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
  * @author Sam Brannen
  * @since 1.0
  */
-@RunWith(SpringJUnit4IntegrationsTestUnterstuetzung.class)
+@RunWith(SpringJUnit4IntegrationsTestUnterstützung.class)
 // Wir müssen nicht alle Attributen auflisten, aber... sicher ist sicher!
 @KontextKonfiguration(
 	KonfigurationsKlassen = { LokaleTestKonfiguration.class },

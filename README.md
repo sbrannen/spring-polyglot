@@ -12,6 +12,14 @@ programming languages.
 And who knows...? Perhaps some of these translated annotations will someday
 make it into the Spring Framework.
 
+# Languages Represented
+
+The following languages currently have one or more translated annotations
+that have been submitted to this project.
+
+- Hipster: see [HipsterTests](https://github.com/sbrannen/spring-polyglot/blob/master/src/test/java/org/springframework/polyglot/hipster/HipsterTests.java)
+- German: see [DeutscheIntegrationsTests](https://github.com/sbrannen/spring-polyglot/blob/master/src/test/java/org/springframework/polyglot/de/DeutscheIntegrationsTests.java)
+
 # Contributing
 
 Feel free to contribute your own translated annotations by submitting

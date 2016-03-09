@@ -15,7 +15,8 @@ make it into the Spring Framework.
 # A German Example
 
 For example, the following is what an integration test in Spring could look
-like when `@ContextConfiguration` is translated into German.
+like when `@ContextConfiguration` is translated into German. Yes, this
+test actually runs: see [DeutscheIntegrationsTests][] for details.
 
 ```java
 @RunWith(SpringJUnit4IntegrationsTestUnterstuetzung.class)
@@ -47,8 +48,8 @@ public final class DeutscheIntegrationsTests {
 The following languages currently have one or more translated annotations
 that have been submitted to this project.
 
-- Hipster: see [HipsterTests](https://github.com/sbrannen/spring-polyglot/blob/master/src/test/java/org/springframework/polyglot/hipster/HipsterTests.java)
-- German: see [DeutscheIntegrationsTests](https://github.com/sbrannen/spring-polyglot/blob/master/src/test/java/org/springframework/polyglot/de/DeutscheIntegrationsTests.java)
+- Hipster: see [HipsterTests][]
+- German: see [DeutscheIntegrationsTests][]
 
 # Contributing
 
@@ -111,3 +112,7 @@ Build all JARs, distribution ZIP files, and docs:
 [Spring Composed]: https://github.com/sbrannen/spring-composed
 [pull requests]: http://help.github.com/send-pull-requests
 [Contributor License Agreement]: https://github.com/spring-projects/spring-framework/blob/master/CONTRIBUTING.md#sign-the-contributor-license-agreement
+[HipsterTests]: https://github.com/sbrannen/spring-polyglot/blob/master/src/test/java/org/springframework/polyglot/hipster/HipsterTests.java
+[DeutscheIntegrationsTests]: https://github.com/sbrannen/spring-polyglot/blob/master/src/test/java/org/springframework/polyglot/de/DeutscheIntegrationsTests.java
+
+

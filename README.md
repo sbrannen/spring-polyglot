@@ -19,7 +19,7 @@ like when `@ContextConfiguration` is translated into German. Yes, this
 test actually runs: see [DeutscheIntegrationsTests][] for details.
 
 ```java
-@RunWith(SpringJUnit4IntegrationsTestUnterstuetzung.class)
+@RunWith(SpringJUnit4IntegrationsTestUnterstützung.class)
 // Wir müssen nicht alle Attributen auflisten, aber... sicher ist sicher!
 @KontextKonfiguration(
 	KonfigurationsKlassen = { TestKonfiguration.class },

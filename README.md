@@ -12,7 +12,7 @@ programming languages.
 And who knows...? Perhaps some of these translated annotations will someday
 make it into the Spring Framework.
 
-# A German Example
+# An Example for Germans
 
 For example, the following is what an integration test in Spring could look
 like when `@ContextConfiguration` is translated into German. Yes, this
@@ -38,6 +38,26 @@ public final class DeutscheIntegrationsTests {
 	@Test
 	public void nachrichtPruefen() {
 		esWirdErwartetDass(Nachricht, istGleich("Alles in Ordnung"));
+	}
+
+}
+```
+
+# An Example for Hipsters
+
+Yes, this test actually runs: see [HipsterTests][] for details.
+
+```java
+@RunWith(SpringFoo.class)
+@Konfigz(klassez = Konfig.class, listenToYoParents = false, whoDat = "Not I said the fly")
+public class HipsterTests {
+
+	@Autowired
+	String message;
+
+	@Test
+	public void checkItOut() {
+		assertEquals("Keepin' it real!", message);
 	}
 
 }

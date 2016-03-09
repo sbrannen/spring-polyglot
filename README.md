@@ -12,6 +12,36 @@ programming languages.
 And who knows...? Perhaps some of these translated annotations will someday
 make it into the Spring Framework.
 
+# For Exmample...
+
+For example, the following is what an integration test in Spring could look
+like when `@ContextConfiguration` is translated into German.
+
+```java
+@RunWith(SpringJUnit4IntegrationsTestUnterstuetzung.class)
+// Wir müssen nicht alle Attributen auflisten, aber... sicher ist sicher!
+@KontextKonfiguration(
+	KonfigurationsKlassen = { TestKonfiguration.class },
+	XmlDateienOderGroovySkripten = { /* keine */ },
+	RessourcenErben = false,
+	Initialisierungsprogramme = { /* keine */ },
+	InitialisierungsprogrammeErben = false,
+	Ladeprogramm = AnnotationConfigContextLoader.class,
+	Name = "In diesem Fall spielt der Name keine Rolle."
+)
+public final class DeutscheIntegrationsTests {
+
+	@Autowired
+	private String Nachricht;
+
+	@Test
+	public void nachrichtPruefen() {
+		esWirdErwartetDass(Nachricht, istGleich("Alles in Ordnung"));
+	}
+
+}
+```
+
 # Languages Represented
 
 The following languages currently have one or more translated annotations

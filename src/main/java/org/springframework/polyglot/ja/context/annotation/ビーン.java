@@ -14,19 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.polyglot.ja.test.context;
+package org.springframework.polyglot.ja.context.annotation;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.annotation.AliasFor;
-
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Inherited;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
 
 /**
  * 日本語版 {@link Bean} アノテーション
@@ -38,7 +37,6 @@ import java.lang.annotation.Target;
 @Target({ ElementType.METHOD, ElementType.ANNOTATION_TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Inherited
 public @interface ビーン {
 
 	@AliasFor(annotation = Bean.class, attribute = "name")

@@ -16,17 +16,17 @@
 
 package org.springframework.polyglot.ja;
 
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.polyglot.ja.JapaneseIntegrationTests.ロケールテストコンフィグ;
-import org.springframework.polyglot.ja.test.context.junit4.スプリングJUnit4テストランナー;
-import org.springframework.polyglot.ja.test.context.オートワイヤリング;
+import org.springframework.polyglot.ja.beans.factory.annotation.オートワイヤリング;
+import org.springframework.polyglot.ja.context.annotation.コンフィグ;
+import org.springframework.polyglot.ja.context.annotation.ビーン;
 import org.springframework.polyglot.ja.test.context.コンテキストコンフィグ;
-import org.springframework.polyglot.ja.test.context.コンフィグ;
-import org.springframework.polyglot.ja.test.context.ビーン;
+import org.springframework.polyglot.ja.test.context.junit4.スプリングJUnit4テストランナー;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
-
-import static org.junit.Assert.assertEquals;
 
 /**
  * 日本語版 Springテスト

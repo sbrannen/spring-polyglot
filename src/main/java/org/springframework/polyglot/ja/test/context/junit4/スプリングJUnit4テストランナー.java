@@ -25,7 +25,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @author Tadaya Tsuyukubo
  * @since 1.0
  */
-public class スプリングJUnit4テストランナー extends SpringJUnit4ClassRunner {
+public final class スプリングJUnit4テストランナー extends SpringJUnit4ClassRunner {
 
 	public スプリングJUnit4テストランナー(Class<?> clazz) throws InitializationError {
 		super(clazz);

@@ -14,27 +14,30 @@
  * limitations under the License.
  */
 
-package org.springframework.polyglot.ja.test.context;
-
-import org.springframework.context.annotation.Configuration;
+package org.springframework.polyglot.ja.beans.factory.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
-import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.AliasFor;
+
 /**
- * 日本語版 {@link Configuration} アノテーション
+ * 日本語版 {@link Autowired} アノテーション
  *
  * @author Tadaya Tsuyukubo
  * @since 1.0
  */
-@Configuration
-@Documented
-@Inherited
+@Autowired
+@Target({ ElementType.CONSTRUCTOR, ElementType.FIELD, ElementType.METHOD, ElementType.ANNOTATION_TYPE })
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
-public @interface コンフィグ {
+@Documented
+public @interface オートワイヤリング {
+
+	@AliasFor(annotation = Autowired.class, attribute = "required")
+	boolean 必須() default true;
+
 }

@@ -12,9 +12,24 @@ programming languages.
 And who knows...? Perhaps some of these translated annotations will someday
 make it into the Spring Framework.
 
-# An Example for Germans
+----
 
-For example, the following is what an integration test in Spring could look
+# Languages Represented
+
+The following languages currently have one or more translated annotations
+that have been submitted to this project.
+
+- German: see [DeutscheIntegrationsTests][]
+- Hipster: see [HipsterTests][]
+- Japanese: see [JapaneseIntegrationTests][] and [SushiTests][]
+
+----
+
+# Examples
+
+## German
+
+For example, the following is what an integration test in Spring can look
 like when `@ContextConfiguration` is translated into German. Yes, this
 test actually runs: see [DeutscheIntegrationsTests][] for details.
 
@@ -43,7 +58,7 @@ public final class DeutscheIntegrationsTests {
 }
 ```
 
-# An Example for Hipsters
+## Hipster
 
 Yes, this test actually runs: see [HipsterTests][] for details.
 
@@ -63,13 +78,7 @@ public class HipsterTests {
 }
 ```
 
-# Languages Represented
-
-The following languages currently have one or more translated annotations
-that have been submitted to this project.
-
-- Hipster: see [HipsterTests][]
-- German: see [DeutscheIntegrationsTests][]
+----
 
 # Contributing
 
@@ -92,6 +101,8 @@ The Spring Polyglot project is released under version 2.0 of the [Apache License
 - [Spring Annotation Programming Model][]: official wiki page from the Spring team
 - [Spring Composed][]: a collection of "serious" _composed annotations_
 for use with the [Spring Framework][]
+
+----
 
 # Building from Source
 
@@ -122,6 +133,7 @@ Build all JARs, distribution ZIP files, and docs:
 
 `./gradlew install`
 
+----
 
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0
 [Gradle]: http://gradle.org
@@ -132,7 +144,8 @@ Build all JARs, distribution ZIP files, and docs:
 [Spring Composed]: https://github.com/sbrannen/spring-composed
 [pull requests]: http://help.github.com/send-pull-requests
 [Contributor License Agreement]: https://github.com/spring-projects/spring-framework/blob/master/CONTRIBUTING.md#sign-the-contributor-license-agreement
+
 [HipsterTests]: https://github.com/sbrannen/spring-polyglot/blob/master/src/test/java/org/springframework/polyglot/hipster/HipsterTests.java
 [DeutscheIntegrationsTests]: https://github.com/sbrannen/spring-polyglot/blob/master/src/test/java/org/springframework/polyglot/de/DeutscheIntegrationsTests.java
-
-
+[JapaneseIntegrationTests]: https://github.com/sbrannen/spring-polyglot/blob/master/src/test/java/org/springframework/polyglot/ja/JapaneseIntegrationTests.java
+[SushiTests]: https://github.com/sbrannen/spring-polyglot/blob/master/src/test/java/org/springframework/polyglot/ja/SushiTests.java

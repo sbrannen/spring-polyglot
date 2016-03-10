@@ -16,16 +16,14 @@
 
 package org.springframework.polyglot.de;
 
-import static org.junit.Assert.*;
+import static org.springframework.polyglot.de.TestWerkzeuge.*;
 
-import org.hamcrest.Matcher;
-import org.hamcrest.core.IsEqual;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.polyglot.de.DeutscheIntegrationsTests.LokaleTestKonfiguration;
+import org.springframework.polyglot.de.beans.factory.annotation.AutomatischVerdrahtet;
+import org.springframework.polyglot.de.context.annotation.Bohne;
+import org.springframework.polyglot.de.context.annotation.Konfiguration;
 import org.springframework.polyglot.de.test.context.KontextKonfiguration;
 import org.springframework.polyglot.de.test.context.junit4.SpringJUnit4IntegrationsTestUnterstützung;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
@@ -41,40 +39,31 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
 @KontextKonfiguration(
 	KonfigurationsKlassen = { LokaleTestKonfiguration.class },
 	XmlDateienOderGroovySkripten = { /* keine */ },
-	RessourcenErben = false,
+	RessourcenErben = falsch,
 	Initialisierungsprogramme = { /* keine */ },
-	InitialisierungsprogrammeErben = false,
+	InitialisierungsprogrammeErben = falsch,
 	Ladeprogramm = AnnotationConfigContextLoader.class,
 	Name = "In diesem Fall spielt der Name keine Rolle."
 )
 public final class DeutscheIntegrationsTests {
 
-	@Autowired
+	@AutomatischVerdrahtet(erforderlich = jawohl)
 	private String Nachricht;
 
 
 	@Test
-	public void nachrichtPruefen() {
+	public void nachrichtPrüfen() {
 		esWirdErwartetDass(Nachricht, istGleich("Alles in Ordnung"));
 	}
 
 
-	@Configuration
+	@Konfiguration
 	static class LokaleTestKonfiguration {
 
-		@Bean
+		@Bohne
 		String Nachricht() {
 			return "Alles in Ordnung";
 		}
-	}
-
-
-	private static <T> void esWirdErwartetDass(T actual, Matcher<? super T> matcher) {
-		assertThat("", actual, matcher);
-	}
-
-	private static <T> Matcher<T> istGleich(T operand) {
-		return IsEqual.<T> equalTo(operand);
 	}
 
 }

@@ -37,22 +37,31 @@ test actually runs: see [DeutscheIntegrationsTests][] for details.
 @RunWith(SpringJUnit4IntegrationsTestUnterstützung.class)
 // Wir müssen nicht alle Attributen auflisten, aber... sicher ist sicher!
 @KontextKonfiguration(
-	KonfigurationsKlassen = { TestKonfiguration.class },
+	KonfigurationsKlassen = { LokaleTestKonfiguration.class },
 	XmlDateienOderGroovySkripten = { /* keine */ },
-	RessourcenErben = false,
+	RessourcenErben = falsch,
 	Initialisierungsprogramme = { /* keine */ },
-	InitialisierungsprogrammeErben = false,
+	InitialisierungsprogrammeErben = falsch,
 	Ladeprogramm = AnnotationConfigContextLoader.class,
 	Name = "In diesem Fall spielt der Name keine Rolle."
 )
 public final class DeutscheIntegrationsTests {
 
-	@Autowired
+	@AutomatischVerdrahtet(erforderlich = jawohl)
 	private String Nachricht;
 
 	@Test
-	public void nachrichtPruefen() {
+	public void nachrichtPrüfen() {
 		esWirdErwartetDass(Nachricht, istGleich("Alles in Ordnung"));
+	}
+
+	@Konfiguration
+	static class LokaleTestKonfiguration {
+
+		@Bohne
+		String Nachricht() {
+			return "Alles in Ordnung";
+		}
 	}
 
 }

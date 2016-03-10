@@ -34,11 +34,9 @@ like when `@ContextConfiguration` is translated into German. Yes, this
 test actually runs: see [DeutscheIntegrationsTests][] for details.
 
 ```java
-@RunWith(SpringJUnit4IntegrationsTestUnterstützung.class)
-// Wir müssen nicht alle Attributen auflisten, aber... sicher ist sicher!
-@KontextKonfiguration(
-	KonfigurationsKlassen = { LokaleTestKonfiguration.class },
-	XmlDateienOderGroovySkripten = { /* keine */ },
+@Kontextkonfiguration(
+	Konfigurationsklassen = { LokaleTestkonfiguration.class },
+	XmlDateienOderGroovySkripte = { /* keine */ },
 	RessourcenErben = falsch,
 	Initialisierungsprogramme = { /* keine */ },
 	InitialisierungsprogrammeErben = falsch,
@@ -56,7 +54,7 @@ public final class DeutscheIntegrationsTests {
 	}
 
 	@Konfiguration
-	static class LokaleTestKonfiguration {
+	static class LokaleTestkonfiguration {
 
 		@Bohne
 		String Nachricht() {

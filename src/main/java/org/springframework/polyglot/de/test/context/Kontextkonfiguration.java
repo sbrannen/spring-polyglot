@@ -41,16 +41,16 @@ import org.springframework.test.context.ContextLoader;
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface KontextKonfiguration {
+public @interface Kontextkonfiguration {
 
 	@AliasFor(annotation = ContextConfiguration.class, attribute = "classes")
 	Class<?>[] value() default {};
 
 	@AliasFor(annotation = ContextConfiguration.class, attribute = "classes")
-	Class<?>[] KonfigurationsKlassen() default {};
+	Class<?>[] Konfigurationsklassen() default {};
 
 	@AliasFor(annotation = ContextConfiguration.class, attribute = "locations")
-	String[] XmlDateienOderGroovySkripten() default {};
+	String[] XmlDateienOderGroovySkripte() default {};
 
 	@AliasFor(annotation = ContextConfiguration.class, attribute = "inheritLocations")
 	boolean RessourcenErben() default true;

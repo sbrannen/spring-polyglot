@@ -46,9 +46,9 @@ public @interface Bohne {
 	Autowire AutomatischVerdrahten() default Autowire.NO;
 
 	@AliasFor(annotation = Bean.class, attribute = "initMethod")
-	String EinrichtungsMethode() default "";
+	String Einrichtungsmethode() default "";
 
 	@AliasFor(annotation = Bean.class, attribute = "destroyMethod")
-	String ZerstörungsMethode() default AbstractBeanDefinition.INFER_METHOD;
+	String Zerstörungsmethode() default AbstractBeanDefinition.INFER_METHOD;
 
 }

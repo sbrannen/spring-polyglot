@@ -20,11 +20,11 @@ import static org.springframework.polyglot.de.TestWerkzeuge.*;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.polyglot.de.DeutscheIntegrationsTests.LokaleTestKonfiguration;
+import org.springframework.polyglot.de.DeutscheIntegrationsTests.LokaleTestkonfiguration;
 import org.springframework.polyglot.de.beans.factory.annotation.AutomatischVerdrahtet;
 import org.springframework.polyglot.de.context.annotation.Bohne;
 import org.springframework.polyglot.de.context.annotation.Konfiguration;
-import org.springframework.polyglot.de.test.context.KontextKonfiguration;
+import org.springframework.polyglot.de.test.context.Kontextkonfiguration;
 import org.springframework.polyglot.de.test.context.junit4.SpringJUnit4IntegrationsTestUnterstützung;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
@@ -36,9 +36,9 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
  */
 @RunWith(SpringJUnit4IntegrationsTestUnterstützung.class)
 // Wir müssen nicht alle Attributen auflisten, aber... sicher ist sicher!
-@KontextKonfiguration(
-	KonfigurationsKlassen = { LokaleTestKonfiguration.class },
-	XmlDateienOderGroovySkripten = { /* keine */ },
+@Kontextkonfiguration(
+	Konfigurationsklassen = { LokaleTestkonfiguration.class },
+	XmlDateienOderGroovySkripte = { /* keine */ },
 	RessourcenErben = falsch,
 	Initialisierungsprogramme = { /* keine */ },
 	InitialisierungsprogrammeErben = falsch,
@@ -58,7 +58,7 @@ public final class DeutscheIntegrationsTests {
 
 
 	@Konfiguration
-	static class LokaleTestKonfiguration {
+	static class LokaleTestkonfiguration {
 
 		@Bohne
 		String Nachricht() {

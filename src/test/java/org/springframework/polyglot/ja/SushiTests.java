@@ -18,11 +18,11 @@ package org.springframework.polyglot.ja;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.polyglot.ja.beans.factory.annotation.オートワイヤリング;
+import org.springframework.polyglot.ja.context.annotation.コンフィグ;
+import org.springframework.polyglot.ja.context.annotation.ビーン;
+import org.springframework.polyglot.ja.test.context.junit4.スプリングJUnit4テストランナー;
 import org.springframework.polyglot.ja.test.context.すしコンフィグ;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
@@ -36,14 +36,14 @@ import static org.springframework.polyglot.ja.SushiTests.SushiConfig;
  * @author Tadaya Tsuyukubo
  * @since 1.0
  */
-@RunWith(SpringJUnit4ClassRunner.class)
+@RunWith(スプリングJUnit4テストランナー.class)
 @すしコンフィグ(新鮮なネタ = SushiConfig.class, さび抜き = false, おまかせ = true, 今日のオススメ = "まぐろがうまいよ！")
 public class SushiTests {
 
-	@Autowired
+	@オートワイヤリング
 	List<Sushi> 今日のネタ;
 
-	@Autowired
+	@オートワイヤリング
 	Sushi maguro;
 
 	@Test
@@ -60,25 +60,25 @@ public class SushiTests {
 		assertEquals("合計", 800, total);
 	}
 
-	@Configuration
+	@コンフィグ
 	static class SushiConfig {
 
-		@Bean
+		@ビーン
 		Sushi maguro() {
 			return new Sushi("まぐろ", 300);
 		}
 
-		@Bean
+		@ビーン
 		Sushi hamachi() {
 			return new Sushi("はまち", 200);
 		}
 
-		@Bean
+		@ビーン
 		Sushi salmon() {
 			return new Sushi("サーモン", 200);
 		}
 
-		@Bean
+		@ビーン
 		Sushi tamago() {
 			return new Sushi("玉子", 100);
 		}

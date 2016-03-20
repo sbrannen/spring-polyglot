@@ -25,8 +25,8 @@ import java.lang.annotation.Target;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Annotacjia fundamentalna w jenzyku polskiego do ekspresji radości, gniewu, rozczarowania i języka naturalnego podczas
- * oprogramowania.
+ * Annotacja fundamentalna w jezyku polskim do ekspresji radości, gniewu, rozczarowania i języka naturalnego podczas
+ * programowania.
  *
  * @author Mark Przemysław Paluch
  * @since 1.0

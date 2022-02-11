@@ -22,6 +22,7 @@ that have been submitted to this project.
 - German: see [DeutscheIntegrationsTests][]
 - Hipster: see [HipsterTests][]
 - Japanese: see [JapaneseIntegrationTests][] and [SushiTests][]
+- Polish: see [PolskieTestyIntegracijne][]
 
 ----
 
@@ -156,3 +157,5 @@ Build all JARs, distribution ZIP files, and docs:
 [DeutscheIntegrationsTests]: https://github.com/sbrannen/spring-polyglot/blob/master/src/test/java/org/springframework/polyglot/de/DeutscheIntegrationsTests.java
 [JapaneseIntegrationTests]: https://github.com/sbrannen/spring-polyglot/blob/master/src/test/java/org/springframework/polyglot/ja/JapaneseIntegrationTests.java
 [SushiTests]: https://github.com/sbrannen/spring-polyglot/blob/master/src/test/java/org/springframework/polyglot/ja/SushiTests.java
+[PolskieTestyIntegracijne]: https://github.com/sbrannen/spring-polyglot/blob/master/src/test/java/org/springframework/polyglot/pl/PolskieTestyIntegracijne.java
+

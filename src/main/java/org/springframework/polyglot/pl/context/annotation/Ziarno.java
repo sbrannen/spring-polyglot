@@ -43,12 +43,12 @@ public @interface Ziarno {
 	String[] nazwa() default {};
 
 	@AliasFor(annotation = Bean.class, attribute = "autowire")
-	Autowire automatycznieZakablowanie() default Autowire.NO;
+	Autowire automatycznieZakablowane() default Autowire.NO;
 
 	@AliasFor(annotation = Bean.class, attribute = "initMethod")
-	String methodaZainicjowalna() default "";
+	String metodaInicjująca() default "";
 
 	@AliasFor(annotation = Bean.class, attribute = "destroyMethod")
-	String methodaNiszcząca() default AbstractBeanDefinition.INFER_METHOD;
+	String metodaNiszcząca() default AbstractBeanDefinition.INFER_METHOD;
 
 }

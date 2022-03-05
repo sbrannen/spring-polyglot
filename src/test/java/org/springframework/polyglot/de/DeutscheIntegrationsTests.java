@@ -29,13 +29,13 @@ import org.springframework.polyglot.de.test.context.junit4.SpringJUnit4Integrati
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
 /**
- * Deutsche Integrations-Tests.
+ * Deutsche Integrationstests.
  *
  * @author Sam Brannen
  * @since 1.0
  */
 @RunWith(SpringJUnit4IntegrationsTestUnterstützung.class)
-// Wir müssen nicht alle Attributen auflisten, aber... sicher ist sicher!
+// Wir müssen nicht alle Attribute auflisten, aber... sicher ist sicher!
 @Kontextkonfiguration(
 	Konfigurationsklassen = { LokaleTestkonfiguration.class },
 	XmlDateienOderGroovySkripte = { /* keine */ },
